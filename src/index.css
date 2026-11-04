@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* Design tokens: change the look of the whole site from here. */
+@theme {
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
+
+  --color-paper: #faf8f4;      /* page background */
+  --color-surface: #ffffff;    /* cards */
+  --color-ink: #0e1738;        /* primary text, deep navy */
+  --color-ink-soft: #55607f;   /* secondary text */
+  --color-line: #e8e5ef;       /* hairline borders */
+  --color-accent: #6b4eff;     /* violet, used sparingly */
+  --color-accent-deep: #4f34d9;
+  --color-accent-soft: #f0ecff;
+
+  --shadow-card: 0 1px 2px rgb(14 23 56 / 0.04), 0 8px 24px -8px rgb(14 23 56 / 0.08);
+  --shadow-float: 0 2px 4px rgb(14 23 56 / 0.04), 0 30px 60px -20px rgb(79 52 217 / 0.28);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
